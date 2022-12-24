@@ -1,38 +1,49 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Poppins:wght@300;500;700;900&display=swap');
+
+:root {
+  --primary-font: 'Poppins', sans-serif;
+  --primary-color: #282c34;
+  --secondary-color: #0c2cff;
+  --accent-color: #fbfb0b;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--primary-font);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
+  background: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
+}
+
+.card {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  padding: 20px;
+  width: 400px;
+  height: 500px;
+  color: #FFF;
+  border: solid 2px #fff;
+  border-radius: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.card h1 {
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card h2 {
+  font-weight: 300;
+  font-size: 0.8rem;
+  padding: 2px;
 }
