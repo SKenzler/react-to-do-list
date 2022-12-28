@@ -7,13 +7,14 @@ const Card = () => {
 
     const [taskItem, setTaskItem] = useState("");
     const [taskList, setTaskList] = useState([]);
+    const [editId, setEditId] = useState(0);
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        if (taskItem !== "") {
-            setTaskList([{ id: `${taskItem}-${Date.now()}`, taskItem }, ...taskItem])
-            setTaskItem("");
+        if (taskItem !== '') {
+            setTaskList([{ id: `${taskItem}-${Date.now()}`, taskItem }, ...taskList])
+            setTaskItem('');
             console.log(taskList);
         }
     }
@@ -21,6 +22,13 @@ const Card = () => {
     const handleDelete = (id) => {
         const deleteTask = taskList.filter((k) => k.id !== id);
         setTaskList([...deleteTask]);
+    }
+
+    const handleEdit = (id) => {
+        const editTask = taskList.find((i) => i.id === id);
+        setTaskList(editTask.taskItem);
+        setEditId(id);
+        console.log(editTask);
     }
 
     return (
@@ -32,7 +40,7 @@ const Card = () => {
         
             <form className="task-form" onSubmit={handleSubmit}>
                 <input type='text' value={taskItem} onChange={(e) => setTaskItem(e.target.value)} />
-                <button type='submit' className="btn-add"><RiAddCircleFill size={20} /></button>
+                <button type='submit' className="btn-add"> {editId?<RiEdit2Fill size={20} />:<RiAddCircleFill size={20} />} /></button>
             </form>
 
             <ul className="task-list">
@@ -40,7 +48,7 @@ const Card = () => {
                 {taskList.map((t) => (
                     <li className="task-item">
                         <span className="task-text" key={t.id}>{t.taskItem}</span>
-                        <button type='button' className="btn-edit"><RiEdit2Fill size={20} /></button>
+                        <button type='button' className="btn-edit" onClick={() => handleEdit(t.id)}><RiEdit2Fill size={20} /></button>
                         <button type='button' className="btn-delete" onClick={() => handleDelete(t.id)}><RiDeleteBin6Fill size={20} /></button>
                     </li>
                 ))}
