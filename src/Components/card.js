@@ -14,6 +14,7 @@ const Card = () => {
         if (taskItem !== "") {
             setTaskList([{ id: `${taskItem}-${Date.now()}`, taskItem }, ...taskItem])
             setTaskItem("");
+            console.log(taskList);
         }
     }
 
@@ -43,7 +44,7 @@ const Card = () => {
                         <button type='button' className="btn-delete" onClick={() => handleDelete(t.id)}><RiDeleteBin6Fill size={20} /></button>
                     </li>
                 ))}
-               
+  
             </ul>
 
         </div>
