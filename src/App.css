@@ -29,11 +29,11 @@ body {
   align-items: center;
   text-align: center;
   padding: 20px;
-  width: 400px;
+  width: 450px;
   height: 500px;
   color: #FFF;
   border: solid 2px #fff;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 
 .card h1 {
@@ -46,4 +46,49 @@ body {
   font-weight: 300;
   font-size: 0.8rem;
   padding: 2px;
+}
+
+.task-form {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 350px;
+}
+
+.task-form > input {
+  width: 90%;
+  padding: 5px;
+  border-radius: 20px;
+  border: none;
+  margin: 10px;
+}
+
+.btn-add, .btn-edit, .btn-delete {
+  background: var(--accent-color);
+  border: none;
+  height: 2rem;
+  padding: 5px;
+  border-radius: 20px;
+  margin: 0 5px;
+}
+
+.task-list {
+  list-style: none;
+}
+
+.task-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 400px;
+  padding: 8px 20px;
+  margin: 10px 0;
+  background: var(--secondary-color);
+  border-radius: 50px;
+}
+
+.task-text {
+  flex: 1;
+  font-size: 0.9rem;
+  font-weight: 300;
 }
