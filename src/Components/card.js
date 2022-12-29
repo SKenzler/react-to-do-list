@@ -46,7 +46,7 @@ const Card = () => {
         
             <form className="task-form" onSubmit={handleSubmit}>
                 <input type='text' value={taskItem} onChange={(e) => setTaskItem(e.target.value)} />
-                <button type='submit' className="btn-add"> {editId ? <RiEdit2Fill size={20} /> : <RiAddCircleFill size={20} />} /></button>
+                <button type='submit' className="btn-add"> {editId ? <RiEdit2Fill size={20} /> : <RiAddCircleFill size={20} />} </button>
             </form>
 
             <ul className="task-list">

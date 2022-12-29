@@ -29,8 +29,8 @@ body {
   align-items: center;
   text-align: center;
   padding: 20px;
-  width: 450px;
-  height: 500px;
+  width: 90%;
+  height: 100%;
   color: #FFF;
   border: solid 2px #fff;
   border-radius: 20px;
@@ -56,7 +56,7 @@ body {
 }
 
 .task-form > input {
-  width: 90%;
+  width: 30em;
   padding: 5px;
   text-indent: 10px;
   border-radius: 20px;
@@ -86,7 +86,7 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  width: 400px;
+  width: 20em;
   padding: 8px 20px;
   margin: 10px 0;
   background: var(--secondary-color);
