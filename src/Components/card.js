@@ -42,14 +42,14 @@ const Card = () => {
            
             <FaMarker size={40} color={'#FFF'} />
             <h1>React To Do List</h1>
-            <h2>Add, edit and delete tasks required for completion</h2>
+            <h2>Add, edit and delete tasks <br /> required for completion</h2>
         
             <form className="task-form" onSubmit={handleSubmit}>
                 <input type='text' value={taskItem} onChange={(e) => setTaskItem(e.target.value)} />
                 <button type='submit' className="btn-add"> {editId ? <RiEdit2Fill size={20} /> : <RiAddCircleFill size={20} />} </button>
             </form>
 
-            <ul className="task-list">
+            <ul className="task-list">  
 
                 {taskList.map((t) => (
                     <li className="task-item" key={t.id}>
